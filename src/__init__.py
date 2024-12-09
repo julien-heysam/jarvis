@@ -25,14 +25,14 @@ class ApiKeys(BaseSettings):
     GEMINI_API_KEY: str = os.environ.get("GEMINI_API_KEY", FAKE_API_KEY)
 
     PINECONE_API_KEY: str = os.environ.get("PINECONE_API_KEY", FAKE_API_KEY)
-    PINECONE_ENV: str = os.environ.get("PINECONE_ENV", None)
-    PINECONE_INDEX: str = os.environ.get("PINECONE_INDEX", None)
-    PINECONE_INDEX_URL: str = os.environ.get("PINECONE_INDEX_URL", None)
+    PINECONE_ENV: str = os.environ.get("PINECONE_ENV", FAKE_API_KEY)
+    PINECONE_INDEX: str = os.environ.get("PINECONE_INDEX", FAKE_API_KEY)
+    PINECONE_INDEX_URL: str = os.environ.get("PINECONE_INDEX_URL", FAKE_API_KEY)
 
-    ALGOLIA_APP_ID: str = os.environ.get("ALGOLIA_APP_ID", None)
+    ALGOLIA_APP_ID: str = os.environ.get("ALGOLIA_APP_ID", FAKE_API_KEY)
     ALGOLIA_SEARCH_API_KEY: str = os.environ.get("ALGOLIA_SEARCH_API_KEY", FAKE_API_KEY)
     ALGOLIA_WRITE_API_KEY: str = os.environ.get("ALGOLIA_WRITE_API_KEY", FAKE_API_KEY)
-    ALGOLIA_INDEX: str = os.environ.get("ALGOLIA_INDEX", None)
+    ALGOLIA_INDEX: str = os.environ.get("ALGOLIA_INDEX", FAKE_API_KEY)
 
     APIFY_API_TOKEN: str = os.environ.get("APIFY_API_TOKEN", FAKE_API_KEY)
     BRAVE_API_KEY: str = os.environ.get("BRAVE_API_KEY", FAKE_API_KEY)
@@ -55,7 +55,7 @@ class ApiKeys(BaseSettings):
     RECALLAI_TRANSCRIPTION_TOKEN: str = os.environ.get("RECALLAI_TRANSCRIPTION_TOKEN", FAKE_API_KEY)
 
     MAILGUN_API_KEY: str = os.environ.get("MAILGUN_API_KEY", FAKE_API_KEY)
-    MAILGUN_DOMAIN: str = os.environ.get("MAILGUN_DOMAIN", None)
+    MAILGUN_DOMAIN: str = os.environ.get("MAILGUN_DOMAIN", FAKE_API_KEY)
 
     ABLY_API_KEY: str = os.environ.get("ABLY_API_KEY", FAKE_API_KEY)
 

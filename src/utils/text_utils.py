@@ -3,8 +3,11 @@ import re
 import xml.etree.ElementTree as ET
 from typing import Optional, Union
 
-import markdown  # type: ignore
-from bs4 import BeautifulSoup
+try:
+    import markdown  # type: ignore
+    from bs4 import BeautifulSoup
+except ImportError:
+    pass
 
 
 class TextUtils:
@@ -44,8 +47,7 @@ class TextUtils:
 
         return template
 
-    @staticmethod
-    def dict_to_string(data: dict) -> str:
+    def dict_to_string(self, data: dict) -> str:
         """Convert a dictionary to a formatted string representation."""
         def format_value(value: Union[list, dict, str]) -> str:
             if isinstance(value, list):

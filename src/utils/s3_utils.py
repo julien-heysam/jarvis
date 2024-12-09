@@ -4,9 +4,7 @@ from contextlib import closing
 from pathlib import Path
 from threading import Event
 
-import boto3
 import requests
-from botocore.exceptions import ClientError
 from rich.progress import (
     BarColumn, 
     DownloadColumn, 
@@ -15,6 +13,12 @@ from rich.progress import (
     TimeRemainingColumn, 
     TransferSpeedColumn
 )
+
+try:
+    import boto3
+    from botocore.exceptions import ClientError
+except ImportError:
+    pass
 
 from src import logging
 

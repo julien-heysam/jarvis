@@ -8,7 +8,7 @@ README = (HERE / "README.md").read_text()
 
 def parse_requirements(filename: str):
     with open(filename, "r") as file:
-        return file.read().splitlines()
+        return [line for line in file.read().splitlines() if line and not line.startswith("-")]
 
 
 setup(
